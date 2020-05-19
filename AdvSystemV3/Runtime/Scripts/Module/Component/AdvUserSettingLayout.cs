@@ -22,9 +22,9 @@ public class AdvUserSettingLayout : MonoBehaviour
 
     void Awake(){
         TextSetSkipMode = BTNSetSkipMode.GetComponentInChildren<TextMeshProUGUI>();
-        TextSetCtrlSkip = BTNSetSkipMode.GetComponentInChildren<TextMeshProUGUI>();
-        TextSetStillAuto = BTNSetSkipMode.GetComponentInChildren<TextMeshProUGUI>();
-        TextSetVoiceSkip = BTNSetSkipMode.GetComponentInChildren<TextMeshProUGUI>();
+        TextSetCtrlSkip = BTNSetCtrlSkip.GetComponentInChildren<TextMeshProUGUI>();
+        TextSetStillAuto = BTNSetStillAuto.GetComponentInChildren<TextMeshProUGUI>();
+        TextSetVoiceSkip = BTNSetVoiceSkip.GetComponentInChildren<TextMeshProUGUI>();
     }
 
     void Start(){
@@ -123,7 +123,7 @@ public class AdvUserSettingLayout : MonoBehaviour
             AdvUserSettingManager.Instance.DialogUseCtrlToSkip = AdvDialogUseCtrlToSkip.HaveRead;
         }
 
-        TextSetSkipMode.text = GetAdvOptionTerm(AdvUserSettingManager.Instance.DialogUseCtrlToSkip);
+        TextSetCtrlSkip.text = GetAdvOptionTerm(AdvUserSettingManager.Instance.DialogUseCtrlToSkip);
     }
 
     public void UserSetAdvStillAutoWhenClick(){      
@@ -134,7 +134,7 @@ public class AdvUserSettingLayout : MonoBehaviour
             AdvUserSettingManager.Instance.StillAutoWhenClick = AdvStillAutoWhenClick.Yes;
         }
 
-        TextSetSkipMode.text = GetAdvOptionTerm(AdvUserSettingManager.Instance.StillAutoWhenClick);
+        TextSetStillAuto.text = GetAdvOptionTerm(AdvUserSettingManager.Instance.StillAutoWhenClick);
     }
 
     public void UserSetAdvVoiceSkipWhenClick(){      
@@ -145,7 +145,7 @@ public class AdvUserSettingLayout : MonoBehaviour
             AdvUserSettingManager.Instance.VoiceSkipWhenClick = AdvVoiceSkipWhenClick.Yes;
         }
 
-        TextSetSkipMode.text = GetAdvOptionTerm(AdvUserSettingManager.Instance.VoiceSkipWhenClick);
+        TextSetVoiceSkip.text = GetAdvOptionTerm(AdvUserSettingManager.Instance.VoiceSkipWhenClick);
     }
 
     public void UserSetAdvLanguage(int id){
