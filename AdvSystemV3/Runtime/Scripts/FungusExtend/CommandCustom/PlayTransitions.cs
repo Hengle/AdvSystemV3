@@ -29,16 +29,16 @@ namespace Fungus
         void PerpareData()
         {
             float rotation = this.rotation * Mathf.PI / 180;
-            AdvManager.instance.advStage.ForegroundLayout.SetupMaterial(animationType, maskTexture, color, rotation);
+            AdvManager.Instance.advStage.ForegroundLayout.SetupMaterial(animationType, maskTexture, color, rotation);
         }
 
         public override void OnEnter()
         {
             PerpareData();
-            var value = AdvManager.instance.advStage.ForegroundLayout.fillValue = invert ? 1 : 0;
+            var value = AdvManager.Instance.advStage.ForegroundLayout.fillValue = invert ? 1 : 0;
             var tagetValue = invert ? 0 : 1;
             DOTween.To(() => value
-                        , v => AdvManager.instance.advStage.ForegroundLayout.fillValue = v
+                        , v => AdvManager.Instance.advStage.ForegroundLayout.fillValue = v
                         , tagetValue, duration).OnComplete(() => Invoke("Continue", delay));
         }
         public override Color GetButtonColor()
@@ -64,7 +64,7 @@ namespace Fungus
                 time = 0;
                 return;
             }
-            AdvManager.instance.advStage.ForegroundLayout.fillValue = invert ? 1 - time : time;
+            AdvManager.Instance.advStage.ForegroundLayout.fillValue = invert ? 1 - time : time;
         }
 
         bool isNeedAlphaTexture()

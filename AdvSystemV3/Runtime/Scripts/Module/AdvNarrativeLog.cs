@@ -64,7 +64,7 @@ public class AdvNarrativeLog : MonoBehaviour
     }
 
     public void ClearNarrativeLog(){
-        AdvManager.instance.fungusNarrativeLog.ClearHistory();
+        AdvManager.Instance.fungusNarrativeLog.ClearHistory();
         theList.Clear();
     }
 }

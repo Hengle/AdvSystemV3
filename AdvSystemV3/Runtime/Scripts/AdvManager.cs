@@ -40,7 +40,7 @@ public partial class AdvManager : SingletonTool.SingletonMono<AdvManager>
 
     [Header("暫存數值")]
     //Adv Manager Template
-    public FlowchartExtend templateFlowChart;
+    public FlowchartExtend templateFlowchart;
     public Block focusBlock;
     public AdvLogLayout lastLogLayout = null;
     public Dictionary<string, bool> HasReadTable;
@@ -178,7 +178,7 @@ public partial class AdvManager : SingletonTool.SingletonMono<AdvManager>
         if(AdvProjectConfig.Instance.SetShowAvatarInNewFlowchart)
             advSayDialog.IconDisplay = true;
             
-        templateFlowChart.StartFlowChart(blockName, callback);
+        templateFlowchart.StartFlowChart(blockName, callback);
         OnLoadAdvContnet?.Invoke(flowchart, blockName);
         Debug.Log("<color=lime>Flowhart Started</color>");
     }
@@ -188,8 +188,8 @@ public partial class AdvManager : SingletonTool.SingletonMono<AdvManager>
     /// </summary>
     public void CompleteStopAdvSystem()
     {
-        if (templateFlowChart != null)
-            templateFlowChart.StopAllBlocks();
+        if (templateFlowchart != null)
+            templateFlowchart.StopAllBlocks();
         advMenuDialog.CloseMenuDialog();
         StopAdvScene();
     }
@@ -476,8 +476,8 @@ public partial class AdvManager : SingletonTool.SingletonMono<AdvManager>
     /// </summary>
     public void StopAllRunningFlowchart()
     {
-        if (templateFlowChart != null)
-            templateFlowChart.StopAllBlocks();
+        if (templateFlowchart != null)
+            templateFlowchart.StopAllBlocks();
     }
 
     /// <summary>
@@ -505,14 +505,14 @@ public partial class AdvManager : SingletonTool.SingletonMono<AdvManager>
         string flowchartName = flowchart.GetName();
         if (loadedFlowchartList.ContainsKey(flowchartName))
         {
-            templateFlowChart = loadedFlowchartList[flowchartName];
+            templateFlowchart = loadedFlowchartList[flowchartName];
         }
         else
         {
-            templateFlowChart = Instantiate(flowchart, Vector3.zero, Quaternion.identity, base.transform);
-            templateFlowChart.name = flowchartName;
-            loadedFlowchartList.Add(flowchartName, templateFlowChart);
-            templateFlowChart.onEndSystem += StopAdvScene;
+            templateFlowchart = Instantiate(flowchart, Vector3.zero, Quaternion.identity, base.transform);
+            templateFlowchart.name = flowchartName;
+            loadedFlowchartList.Add(flowchartName, templateFlowchart);
+            templateFlowchart.onEndSystem += StopAdvScene;
 
             //以Queue 限制最大Flowchart 數量
             loadedFlowchartQueue.Enqueue(flowchartName);

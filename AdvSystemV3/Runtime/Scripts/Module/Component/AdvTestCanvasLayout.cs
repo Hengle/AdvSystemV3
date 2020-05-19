@@ -41,8 +41,8 @@ public class AdvTestCanvasLayout : MonoBehaviour
         }
 
         if(Input.GetKeyDown(KeyCode.F4)){
-            if(AdvManager.Instance.templateFlowChart != null)
-                AdvManager.Instance.templateFlowChart.StopAllBlocks();
+            if(AdvManager.Instance.templateFlowchart != null)
+                AdvManager.Instance.templateFlowchart.StopAllBlocks();
             AdvManager.Instance.StopAdvScene();
         }
         if(Input.GetKeyDown(KeyCode.F5)){
