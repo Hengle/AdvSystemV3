@@ -15,7 +15,7 @@ namespace Sirenix.Utilities
 
     }
 }
-
+#if UNITY_EDITOR
 namespace Sirenix.OdinInspector.Editor
 {
     public class OdinEditorWindow : UnityEditor.EditorWindow
@@ -29,6 +29,7 @@ namespace Sirenix.OdinInspector.Editor
     }
 
 }
+#endif
 
 namespace Sirenix.OdinInspector
 {
