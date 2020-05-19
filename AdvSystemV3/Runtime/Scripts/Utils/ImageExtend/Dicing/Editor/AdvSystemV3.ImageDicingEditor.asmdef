@@ -1,0 +1,17 @@
+{
+    "name": "AdvSystemV3.ImageDicingEditor",
+    "references": [
+        "AdvSystemV3",
+        "AdvSystemV3.ImageLibEditor"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

@@ -1,0 +1,53 @@
+Fungus\Scripts\Editor\BlockEditor.cs
+
+-	[CustomEditor(typeof(Block))]
++	//[CustomEditor(typeof(Block))]
+-        protected void PlayCommand()
++        protected virtual void PlayCommand()
+
+
+MenuDialog.cs
+
+-       private bool AddOption(string text, bool interactable, bool hideOption, UnityEngine.Events.UnityAction action)
++       protected virtual bool AddOption(string text, bool interactable, bool hideOption, UnityEngine.Events.UnityAction action)
+
+MusicManager.cs
+
+        public virtual void StopMusic()
+        {
++            LeanTween.cancel(gameObject);
+            audioSourceMusic.Stop();
+            audioSourceMusic.clip = null;
+        }
+
+CommandEditor.cs
+
++	using Sirenix.OdinInspector.Editor;
+-	public class CommandEditor : Editor 
++	public class CommandEditor : OdinEditor
+
+	public virtual void DrawCommandGUI()
+        {
++            DrawDefaultInspector();
++            return;
+
+
+
+
+AdvScenarioChecker 新的檢查方式來取代
+一邊編輯一邊update csv
+block 也要存keys
+
+remove cmd 班到 advutility
+
+vpun != hpun
+
+Advkeys?
+
+
+快進至場景時的背景
+快進指令
+
+package manager
+
+dice sprite

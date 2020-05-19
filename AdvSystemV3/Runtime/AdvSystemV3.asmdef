@@ -1,0 +1,17 @@
+{
+    "name": "AdvSystemV3",
+    "references": [
+        "Fungus",
+        "Unity.TextMeshPro",
+        "SpriteDicing",
+        "DOTween.Modules"
+    ],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": []
+}

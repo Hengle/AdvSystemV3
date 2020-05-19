@@ -1,0 +1,10 @@
+{
+    "name": "com.usagihime.advsystemv3",
+    "displayName": "AdvSystem V3",
+    "version": "0.9.0",
+    "unity": "2018.4",
+    "description": "Unity lib by UsagiHime.",
+    "dependencies": {
+		"com.unity.textmeshpro": "1.4.1"
+	}
+}
